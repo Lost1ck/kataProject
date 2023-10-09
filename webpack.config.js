@@ -30,7 +30,7 @@ module.exports = {
             template: path.resolve(__dirname, 'src', 'index.html')
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
+            filename: '[name].[contenthash].css',
         }),
     ],
     module: {
