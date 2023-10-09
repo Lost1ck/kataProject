@@ -1,0 +1,48 @@
+.repair {
+    background-color: #F8F8F8;
+
+}
+
+.repair-header {
+    padding: 16px 32px;
+    height: 56px;
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFF 98.61%);
+}
+
+.repair-h2 {
+    color: $text-second;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+}
+
+.repair-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.wrap-card {
+    margin: 16px 30px;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    width: 240px;
+    height: 160px;
+}
+
+.wrap-card > a {
+    display: flex;
+    justify-content: flex-end;
+    height: 180px;
+}
+
+.wrap-card > img {
+    width: 40px;
+    height: 40px;
+}
