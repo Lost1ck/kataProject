@@ -1,0 +1,14 @@
+
+body {
+    font-family: 'TTlakes regular';
+    background-color: $back;
+    color: $text;
+}
+
+.img {
+    width: 300px;
+    height: 150px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image: url('img/main_2x.jpg');
+}
