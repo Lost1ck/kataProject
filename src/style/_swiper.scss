@@ -1,218 +1,120 @@
-
-.swipper {
-    background-color: $main-back;
-    height: 196px;
-}
+$swiper-pagination-bullet-size: 12px;
 
 .swipper-header {
-    padding: 15px 0 15px 15px;
-    height: 80px;
-    background: linear-gradient(90deg, $main-back 0%, #FFF 98.61%);
+  padding: 16px 32px;
+  height: 56px;
+  background: linear-gradient(90deg, #F8F8F8 0%, #FFF 98.61%);
 }
 
 .swipper__h2 {
-    color: $text-second;
-    font-family: "TT Lakes-regular",sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    text-transform: uppercase;
+  color: #7E7E82;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
 }
 
 .swiper-slide-next {
-    margin-left: -40px;
+  margin-left: -40px;
 }
 
 .swiper {
-    position: relative;
-    margin-top: 0;
-    display: flex;
-    width: 300px;
-    padding: 15px 0 15px 15px;
-    height: 110px;
-}
+  position: relative;
+  margin-top: 0;
+  width: 340px;
+  padding: 10px 10px 0 30px;
+  height: 120px;
 
-.swiper::after {
+  &::after {
     position: absolute;
     content: '';
-    top: 0;
-    right: -2px;
-    width: 24px;
+    top: 15px;
+    right: -8px;
+    width: 26px;
     height: 71px;
-    background: linear-gradient(270deg, $main-back 16.84%, rgba(248, 248, 248, 0.00) 100%);
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
     z-index: 3;
+  }
 }
 
-.swiper-backface-hidden .swiper-slide  {
-    position: relative;
+.swiper-backface-hidden .swiper-slide {
+  position: relative;
 }
 
-.swiper-slide-next  {
-    position: relative;
-}
-
-.services {
-    display: none;
-}
-
-.swipper-footer {
-    display: none;
+.swiper-slide-next {
+  position: relative;
 }
 
 .swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,12px));
-    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,12px));
+  width: var(--swiper-pagination-bullet-width, $swiper-pagination-bullet-size);
+  height: var(--swiper-pagination-bullet-height, $swiper-pagination-bullet-size);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-    bottom: var(--swiper-pagination-bottom,0);
-    top: var(--swiper-pagination-top,auto);
-    left: 0;
-    width: 100%;
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 0);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
 }
 
 .swiper-slide {
-    flex-shrink: 0;
-    position: relative;
-}
-
-.swiper-card {
-    display: flex;
+  position: relative;
 }
 
 .swiper-pagination-bullet-active {
-    background: var(--swiper-pagination-color, #B5B6BC);
+  background: var(--swiper-pagination-color, #B5B6BC);
 }
 
 .swiper-card {
-    padding: 0 15px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    width: 240px;
-    height: 72px;
-    border-radius: 6px;
-    border: 1px solid $divided-action;
-    background: $carousel-back;
+  padding: 0 15px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 240px;
+  height: 72px;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
 }
 
-.display--flex {
-    display: flex;
+.swipper-footer {
+  display: none;
 }
 
-.display--none {
-    display: none;
-}
+@media (min-width: 768px) {
+  .swiper {
+    width: auto;
+    height: auto;
 
-
-@media (min-width:768px) {
-    
-    .swipper {
-        background-color: $main-back;
-        height: 768px;
-    }        
-
-    .swipper-header {
-        height: 56px;
+    .swiper-slide {
+      width: 240px !important;
+      display: flex;
+      margin: 10px;
     }
 
-    /* ---- swiper ---- */
-
-    .services {
-        padding: 15px 0 15px 15px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 30px;
+    .swiper-wrapper {
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    .services-card {
-        display: flex;
-        padding: 0 15px;
-        align-items: center;
-        justify-content: space-between;
-        width: 240px;
-        height: 72px;
-        border-radius: 6px;
-        border: 1px solid $divided-action;
-        background: $carousel-back;
+    .swiper-pagination {
+      display: none;
+      position: static;
+      content: '';
     }
 
-    /* ---- swiper ---- */
-
-    .swiper {
-        display: none;
+    &::after {
+      display: none;
     }
 
-    /* ---- footer ---- */
-
-    .swipper-footer {
-        padding: 15px 0 15px 15px;
-        display: flex;
-        align-items: center;
+    .footer-button {
+      display: block;
     }
-
-    .swipper-footer p {
-        color: $items-main;
-        font-family: "TT Lakes-regular",sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: -0.2px;
-    }
-    
-        /* ---- switch footer-footer-button ---- */
-    .footer__button a {
-        display: flex;
-        align-self: center;
-    }
-    
-    .footer__button a {
-        display: flex;
-    }
-    
-    .footer__button a img {
-        margin-right: 5px;
-    }
-
-    .hiddenCart {
-        display: flex;
-    }
-
-    .display--flex {
-        display: flex;
-    }
-    
-    .display--none {
-        display: none;
-    }
-
-}
-
-@media (min-width: 768px) and (max-width: 1120px) {
-
-    .services-card:nth-child(n+8) {
-        display: flex;
-    }
-
-    .services.visible > .services-card:nth-child(n+8),
-    .services.visible .services-card:nth-child(4) {
-        display: none;
-    }
-    
-}
-
-@media (min-width:1120px) {
-
-    .services-card:nth-child(n+9) {
-        display: flex;
-    }
-
-    .services.visible .services-card:nth-child(n+9) {
-        display: none;
-    }
+  }
 }

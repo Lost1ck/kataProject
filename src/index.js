@@ -1,6 +1,11 @@
 import "@babel/polyfill";
-import Swiper from 'swiper';
+
+import Swiper from 'swiper/bundle';
 import 'swiper/css';
+import 'swiper/css/bundle';
+import 'swiper/css/pagination';
+import 'swiper/modules';
+import {Pagination} from 'swiper/modules';
 import './index.html';
 import './index.scss';
 
@@ -11,20 +16,41 @@ console.log(sum(3,6));
 console.log(minus(9,1));
 
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
+var swiper = null;
+
+function initSwiper() {
+  swiper = new Swiper('.swiper', {
     loop: true,
-  
-    // If we need pagination
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
     },
-    
   });
+}
+
+function destroySwiper() {
+  if (swiper !== null) {
+    swiper.destroy();
+    swiper = null;
+  }
+}
+
+var breakpoint768 = window.matchMedia('(min-width: 768px)');
+
+function checkScreenWidth() {
+  if (breakpoint768.matches) {
+    destroySwiper();
+  } else {
+    initSwiper();
+  }
+}
+
+window.addEventListener('load', checkScreenWidth);
+window.addEventListener('resize', checkScreenWidth);
+
 
   const hideBotton = document.querySelector('.footer-button_text');
-  const hiddenSlides = document.querySelector('.services');
+  const hiddenSlides = document.querySelector('.swiper-wrapper');
   const hideIcon = document.querySelector('.footer-button_img');
   
 
@@ -51,4 +77,6 @@ const swiper = new Swiper('.swiper', {
           hideList();
       }
   })
+
+
 

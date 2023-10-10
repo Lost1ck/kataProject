@@ -1,6 +1,7 @@
+$repair-text-color: $text-second;
+
 .repair {
     background-color: #F8F8F8;
-
 }
 
 .repair-header {
@@ -10,7 +11,7 @@
 }
 
 .repair-h2 {
-    color: $text-second;
+    color: $repair-text-color;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -34,15 +35,15 @@
     background: #FFF;
     width: 240px;
     height: 160px;
-}
 
-.wrap-card > a {
-    display: flex;
-    justify-content: flex-end;
-    height: 180px;
-}
+    > a {
+        display: flex;
+        justify-content: flex-end;
+        height: 180px;
+    }
 
-.wrap-card > img {
-    width: 40px;
-    height: 40px;
+    > img {
+        width: 40px;
+        height: 40px;
+    }
 }
