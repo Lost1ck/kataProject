@@ -1,0 +1,58 @@
+.commertion-info {
+    color: #1B1C21;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    width: 421px;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  
+    .mark {
+      position: relative;
+      margin-left: 5px;
+      
+      &-up {
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        width: 6.4px;
+        height: 1.4px;
+        background-color: $icons-back;
+        rotate: 45deg;
+        border-radius: 1px;
+      }
+  
+      &-bottom {
+        position: absolute;
+        left: 0px;
+        top: 2px;
+        width: 6.4px;
+        height: 1.4px;
+        background-color: $icons-back;
+        rotate: -45deg;
+        border-radius: 1px;
+      }
+    }
+  
+  
+    a {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      p {
+        color: $items-main;
+        font-size: 16px;
+        font-family: 'TT Lake-bold',sans-serif;
+        color: #1B1C21;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; 
+        letter-spacing: -0.2px;
+      }
+  
+    }
+  }

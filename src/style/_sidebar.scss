@@ -1,12 +1,10 @@
-    // sidebar
-
-
 
     .sidebar {
         min-width: 320px;
         position: relative;
         padding: 25px;
-        min-height: 1024px;
+        min-height: 320px;
+        max-height: 1024px;
         background-color: $carousel-back;
     }
 

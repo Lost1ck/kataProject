@@ -1,5 +1,4 @@
 import "@babel/polyfill";
-
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
 import 'swiper/css/bundle';
@@ -8,30 +7,42 @@ import 'swiper/modules';
 import {Pagination} from 'swiper/modules';
 import './index.html';
 import './index.scss';
-
-import {sum, minus} from './modules/calc.js';
-
-
-console.log(sum(3,6));
-console.log(minus(9,1));
+import './modules/hide'
 
 
-var swiper = null;
+var swipers = {}; // Создаем объект для хранения экземпляров Swiper
+var breakpoints = {
+  768: {
+    slidesPerView: 1,
+    spaceBetween: 20
+  },
+  992: {
+    slidesPerView: 2,
+    spaceBetween: 30
+  },
+  1200: {
+    slidesPerView: 3,
+    spaceBetween: 40
+  }
+};
 
-function initSwiper() {
-  swiper = new Swiper('.swiper', {
+function initSwiper(containerClass, paginationClass) {
+  swipers[containerClass] = new Swiper('.' + containerClass, {
     loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination-' + paginationClass,
       clickable: true,
     },
+    breakpoints: breakpoints,
   });
 }
 
-function destroySwiper() {
-  if (swiper !== null) {
-    swiper.destroy();
-    swiper = null;
+function destroySwiper(containerClass) {
+  if (swipers[containerClass] !== undefined) {
+    swipers[containerClass].destroy();
+    delete swipers[containerClass];
   }
 }
 
@@ -39,9 +50,15 @@ var breakpoint768 = window.matchMedia('(min-width: 768px)');
 
 function checkScreenWidth() {
   if (breakpoint768.matches) {
-    destroySwiper();
+    destroySwiper('swiper1'); // Уничтожаем Swiper 1
+    // Уничтожаем Swiper 2 и 3, если они есть
+    destroySwiper('swiper2');
+    destroySwiper('swiper3');
   } else {
-    initSwiper();
+    initSwiper('swiper1', 1); // Инициализируем Swiper 1 с пагинацией 1
+    // Инициализируем Swiper 2 и 3, если они есть
+    initSwiper('swiper2', 2);
+    initSwiper('swiper3', 3);
   }
 }
 
@@ -49,34 +66,13 @@ window.addEventListener('load', checkScreenWidth);
 window.addEventListener('resize', checkScreenWidth);
 
 
-  const hideBotton = document.querySelector('.footer-button_text');
-  const hiddenSlides = document.querySelector('.swiper-wrapper');
-  const hideIcon = document.querySelector('.footer-button_img');
-  
 
-  let isHidden = true;
-  
-  let showList = () => {
-      hiddenSlides.classList.toggle('visible');
-      hideBotton.innerHTML = 'Показать все';
-      isHidden = false;
-      hideIcon.style = 'transform: rotate(180deg)';
-    }
-    
-    let hideList = () => {
-        hiddenSlides.classList.toggle('visible');
-        isHidden = true;
-        hideBotton.innerHTML = 'Скрыть';
-      hideIcon.style = 'transform: rotate(0deg)';
-  }
-  
-  hideBotton.addEventListener('click', () => {
-      if (isHidden) {
-          showList();
-      } else {
-          hideList();
-      }
-  })
+
+
+
+
+
+
 
 
 
