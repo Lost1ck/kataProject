@@ -1,5 +1,9 @@
 $swiper-pagination-bullet-size: 12px;
 
+.swipers {
+  background-color: #F8F8F8;
+}
+
 .swipper-header {
   background: linear-gradient(90deg, #F8F8F8 0%, #FFF 98.61%);
 }
@@ -14,20 +18,13 @@ $swiper-pagination-bullet-size: 12px;
   text-transform: uppercase;
 }
 
-.swiper-slide-next {
-  margin-left: -40px;
-}
-
 .swipper-header {
   padding: 15px;
 }
 
-.swiper1,.swiper2{
-  padding: 15px;
+.swiper1, .swiper2, .swiper3 {
   position: relative;
-  margin-top: 0;
   width: 340px;
-  height: 120px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -35,48 +32,72 @@ $swiper-pagination-bullet-size: 12px;
   &::after {
     position: absolute;
     content: '';
-    top: 15px;
-    right: -8px;
+    top: 0;
+    right: 0;
     width: 26px;
     height: 71px;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
     z-index: 3;
   }
+}
+
+.swiper1 {
+  height: 100px;
+}
+
+.swiper2 {
+  height: 190px;
+}
+
+.swiper1, .swiper2, .swiper3 {
+  margin: 10px auto;
 }
 
 .swiper3 {
-  position: relative;
-  margin-top: 0;
-  width: 340px;
-  height: 120px;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-
-  .swiper-card {
-    border-radius: 6px;
-    border-width: 0;
-    background: #FFF;
-  }
-
-  &::after {
-    position: absolute;
-    content: '';
-    top: 15px;
-    right: -8px;
-    width: 26px;
-    height: 71px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
-    z-index: 3;
-  }
+  height: 230px;
 }
 
-.swiper-backface-hidden .swiper-slide {
-  position: relative;
+.swiper-card {
+  padding: 0 15px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 240px;
+  height: 72px;
+  border-radius: 6px;
+  background: #FFF;
 }
 
-.swiper-slide-next {
-  position: relative;
+.swiper-card2 {
+  display: flex;
+  justify-content: space-around;
+  width: 240px;
+  height: 160px;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+  padding: 15px;
+}
+
+.swiper-card3 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 240px;
+  height: 200px;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+  padding: 15px;
+}
+
+.swiper-card2 > a {
+  display: flex;
+  align-items: flex-end;
+}
+
+.swipper-footer {
+  display: none;
 }
 
 .swiper-pagination-bullet {
@@ -94,183 +115,68 @@ $swiper-pagination-bullet-size: 12px;
   width: 100%;
 }
 
-.swiper-slide {
-  position: relative;
-}
-
 .swiper-pagination-bullet-active {
   background: var(--swiper-pagination-color, #B5B6BC);
 }
 
-.swiper-card {
-  padding: 0 15px;
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
-  width: 240px;
-  height: 72px;
-  border-radius: 6px;
-  background: #FFF;
+.swiper-wrapper {
+  position: relative;
 }
 
-.swiper-card2 {
-  display: flex;
-  width: 224px;
-  height: 160px;
-  border-radius: 6px;
-  border: 1px solid #EAEAEA;
-  background: #FFF;
-}
-
-.swiper-card2 > a {
-  display: flex;
-  align-items: flex-end;
-}
-
-.swiper2 {
-  height: 200px;
-}
-
-.swipper-footer {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .swiper1,.swiper2 {
-    width: auto;
-    height: auto;
-    
-
-    .swiper-slide {
-      width: 240px !important;
-      display: flex;
-      margin: 10px;
-    }
-
-    .swiper-wrapper {
-      padding: 10px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .swiper-pagination {
-      display: none;
-      position: static;
-      content: '';
-    }
-
-    &::after {
-      display: none;
-    }
-
-    .footer-button {
-      display: block;
-    }
-  }
-
-  .swiper3 {
-    width: auto;
-    height: auto;
-    border-radius: 6px;
-    background: #FFF;
-    margin: 10px;
-    border-radius: 6px;
-    
-    .swiper-card3 {
-      width: auto;
-    }
-
-    .swiper-slide3 {
-      width: auto !important;
-    }
-
-    .swiper-wrapper {
-      display: block;
-    }
-
-    .swiper-pagination {
-      display: none;
-      position: static;
-      content: '';
-    }
-
-    &::after {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1440px) {
-  .swiper-slide:nth-child(n+8) {
-      display: block;
-  }
-}
-
-@media (min-width: 1440px) {
-  .swiper-slide:nth-child(n+9) {
-      display: block;
-  }
-}
-
-.swiper-to-left {
-  margin-left: -40px;
-}
-
-.swiper-size {
-  width: 300px;
-}
-
-.swiper-card3__link {
-  background-color: $icons-back;
-  border-radius: 16px;
-  width: 119px;
-  height: 32px;
-  padding: 5px 15px;
-  color: $carousel-back;
-}
-
-.swiper-card3 a:visited {
-  color: $carousel-back;
-}
-
-.swipper-services {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: auto;
-  height: auto;
-  padding: 10px 10px 10px 20px;
+.swiper-services, .swiper-price, .swiper-order {
   color: #7E7E82;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 16px; 
+  line-height: 18px; /* 128.571% */
+  letter-spacing: 0.2px;
 }
 
-.swipper-services > p:nth-child(2),
-.swipper-services > p:nth-child(3) {
-  margin: 0;
+.services__p--second {
+  color: black;
+  font-size: 14px;
+}
 
-  &:nth-child(2) {
-    margin-left: -180px;
+.swiper-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-order {
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #FF3E79;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  color: #fff;
+}
+
+.swiper__disapear--b768 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .swiper-slide:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: auto;
+    left: 2%;
+    right: 2%;
+    background-color: $divided-action;
   }
+}
 
-  &:nth-child(3) {
-    margin-left: -110px;
+.swiper3, .swiper2 {
+  &::after {
+    top: 0;
+    right: 0;
+    width: 26px;
+    height: 160px;
   }
-}
-
-.swiper-slide3:not(:last-child)::after  {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  height: 1px;
-  width: auto;
-  left: 1%;
-  right: 1%;
-  background-color: $divided-action;
-}
-
-.swiper-wrapper {
-  position: relative;
 }

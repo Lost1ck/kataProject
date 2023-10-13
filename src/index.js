@@ -10,32 +10,25 @@ import './index.scss';
 import './modules/hide'
 
 
-var swipers = {}; // Создаем объект для хранения экземпляров Swiper
-var breakpoints = {
-  768: {
-    slidesPerView: 1,
-    spaceBetween: 20
-  },
-  992: {
-    slidesPerView: 2,
-    spaceBetween: 30
-  },
-  1200: {
-    slidesPerView: 3,
-    spaceBetween: 40
-  }
-};
+var swipers = {};
 
 function initSwiper(containerClass, paginationClass) {
   swipers[containerClass] = new Swiper('.' + containerClass, {
     loop: true,
-    slidesPerView: 1,
-    spaceBetween: 20,
+    slidesPerView: 'auto',
     pagination: {
       el: '.swiper-pagination-' + paginationClass,
       clickable: true,
     },
-    breakpoints: breakpoints,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.3,
+        enabled: true,
+      },
+      768: {
+        enabled: false,
+      },
+    },
   });
 }
 
@@ -46,17 +39,16 @@ function destroySwiper(containerClass) {
   }
 }
 
+
 var breakpoint768 = window.matchMedia('(min-width: 768px)');
 
 function checkScreenWidth() {
   if (breakpoint768.matches) {
-    destroySwiper('swiper1'); // Уничтожаем Swiper 1
-    // Уничтожаем Swiper 2 и 3, если они есть
+    destroySwiper('swiper1');
     destroySwiper('swiper2');
     destroySwiper('swiper3');
   } else {
-    initSwiper('swiper1', 1); // Инициализируем Swiper 1 с пагинацией 1
-    // Инициализируем Swiper 2 и 3, если они есть
+    initSwiper('swiper1', 1);
     initSwiper('swiper2', 2);
     initSwiper('swiper3', 3);
   }

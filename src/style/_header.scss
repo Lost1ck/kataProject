@@ -212,3 +212,14 @@
         display: block;
     }
     
+    @media (min-width:1440px) {
+        .block--disapear {
+            display: none;
+        }
+    }
+
+    @media sceen and (max-width:1439px) {
+        .block--disapear {
+            display: block;
+        }
+    }
