@@ -1,0 +1,128 @@
+.header-footer {
+    padding: 15px;
+
+    .assignment-prices {
+        color: $items-main;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        padding-bottom: 15px;
+    }
+
+    .assignment-suggetion {
+        padding-bottom: 15px;
+        a {
+            position: relative;
+            color: $items-main;
+            font-family: 'TTlakes bold', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            margin-right: 10px;
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 12px;
+                left: 110px;
+                width: 8px;
+                height: 2px;
+                background-color: $icons-back;
+                rotate: -145deg;
+                border-radius: 6px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 8px;
+                left: 110px;
+                width: 8px;
+                height: 2px;
+                background-color: $icons-back;
+                rotate: 145deg;
+                border-radius: 6px;
+            }
+        }  
+    
+    }
+
+    .footer-info {
+        color: $text-second;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        text-align: center;
+
+        .info-made {
+            padding-bottom: 15px;
+        }
+
+        .info-confidential {
+            padding-bottom: 15px;
+        }
+
+        .info-oferta {
+
+        }
+        
+    }
+}
+
+@media (min-width: 339px){
+
+.header-footer {
+
+        .assignment-suggetion {
+            a {
+                display: inline;
+                &::before {
+                    right: -15px;
+                    left: auto;
+                }
+
+                &::after {
+                    right: -15px;
+                    left: auto;
+                }
+            }  
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .header-footer .assignment-prices {
+        width: 421px;
+    }
+
+.header-footer  {
+
+    .footer-info {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr 1fr;
+        .info-made {
+            padding-bottom: 0;
+            text-align: left;
+        }
+
+        .info-confidential {
+            padding-bottom: 0;
+        }
+
+        .info-oferta {
+            text-align: right;
+        }
+        
+    }
+}
+
+}

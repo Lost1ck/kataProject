@@ -24,7 +24,6 @@ $swiper-pagination-bullet-size: 12px;
 
 .swiper1, .swiper2, .swiper3 {
   position: relative;
-  width: 340px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -42,19 +41,20 @@ $swiper-pagination-bullet-size: 12px;
 }
 
 .swiper1 {
-  height: 100px;
+  height: 110px;
 }
 
 .swiper2 {
-  height: 190px;
+  height: 200px;
 }
 
 .swiper1, .swiper2, .swiper3 {
   margin: 10px auto;
+  // padding: 10px;
 }
 
 .swiper3 {
-  height: 230px;
+  height: 240px;
 }
 
 .swiper-card {
@@ -121,6 +121,7 @@ $swiper-pagination-bullet-size: 12px;
 
 .swiper-wrapper {
   position: relative;
+  padding: 10px;
 }
 
 .swiper-services, .swiper-price, .swiper-order {
@@ -172,11 +173,27 @@ $swiper-pagination-bullet-size: 12px;
   }
 }
 
-.swiper3, .swiper2 {
+.swiper1 {
   &::after {
-    top: 0;
+    top: 10px;
+    right: 0;
+    width: 26px;
+    height: 70px;
+  }
+}
+
+.swiper2 {
+  &::after {
+    top: 10px;
     right: 0;
     width: 26px;
     height: 160px;
   }
+}
+
+.swiper3::after {
+  top: 10px;
+  right: 0;
+  width: 26px;
+  height: 200px;
 }
