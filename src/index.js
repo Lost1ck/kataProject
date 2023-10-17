@@ -7,9 +7,10 @@ import 'swiper/modules';
 import {Pagination} from 'swiper/modules';
 import './index.html';
 import './index.scss';
-import './modules/hide'
+import './modules/hide';
 
 
+//swiper
 var swipers = {};
 
 function initSwiper(containerClass, paginationClass) {
@@ -56,15 +57,3 @@ function checkScreenWidth() {
 
 window.addEventListener('load', checkScreenWidth);
 window.addEventListener('resize', checkScreenWidth);
-
-
-
-
-
-
-
-
-
-
-
-

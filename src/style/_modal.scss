@@ -1,0 +1,230 @@
+input {
+    width: 288px;
+    padding: 10px 5px 10px 15px;
+    color: grey;
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+}
+
+textarea {
+    width: 288px;
+    height: 130px;
+    padding: 10px 5px 10px 15px;
+    color: grey;
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    resize: none;
+  }
+
+  .modal-confidential {
+    color: #7E7E82;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .modal-confidential__text-color {
+    color: #FF3E79;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+  }
+input::placeholder {
+    color: grey;
+}
+
+.modal-confidential-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 16px;
+    background-color: #FF3E79;
+    color: #fff;
+    border: none;
+    width: 136px;
+    height: 32px;
+}
+
+.modal-crosshair + .logo {
+  background-color: #fff;
+}
+
+.modal-crosshair {
+  padding: 20px 0 0 20px;
+}
+
+.modal {
+  display: none;
+}
+
+// @media (min-width:1440px) {
+
+  .item-status {
+    position: relative;
+  }
+  .modal {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 2;
+
+    &-crosshair1{
+        position: absolute;
+        top: 12px;
+        right: 330px;
+        cursor: pointer;
+      
+      .logo {
+        display: block;
+        h1 {
+          font-size: 24px;
+        }
+          &--h1::after {
+            position: absolute;
+            content: "";
+            left: 0px;
+            top: 10px;
+            width: 3px;
+            height: 40px;
+            background-color: #41F6D7;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+          }
+        }
+      }
+      
+      .modal-crosshair2 {
+        position: absolute;
+        top: 12px;
+        right: 330px;
+        cursor: pointer;
+      .logo {
+        display: block;
+        h1
+          &--h1::after {
+            position: absolute;
+            content: "";
+            left: 0px;
+            top: 10px;
+            width: 3px;
+            height: 40px;
+            background-color: #41F6D7;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+          }
+        }
+      }
+    }
+
+    .modal {
+      h1 {
+        color: #1B1C21;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+      }
+    }
+
+    .logo:nth-child(2) {
+      background: #fff;
+      display: block;
+    }
+    .absolute-status,
+    .absolute-request {
+      display: flex;
+      right: 0;
+      z-index: 3;
+    }
+    form.modal-form {
+      display: flex;
+      padding: 10px;
+      gap: 5px;
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+
+  .modal-container {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  }
+
+  .modal-bg1,
+  .modal-bg2 {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.98;
+}
+// }
+
+@media (min-width: 320px) and (max-width: 376px) {
+  .item-status {
+    position: relative;
+  }
+  .modal {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 11;
+
+    .modal-crosshair1,
+    .modal-crosshair2 {
+        padding: 20px 0 0 20px;
+        position: static;
+        display: block;
+        cursor: pointer;
+      }
+      .logo {
+        display: block;
+        h1 {
+          font-size: 24px;
+        }
+        &--h1::after {
+          top: -5px;
+        }
+      }
+  }
+    .logo:nth-child(2) {
+      background: #fff;
+      display: block;
+    }
+    .absolute-status,
+    .absolute-request {
+      display: flex;
+      right: 0;
+      z-index:11;
+    }
+    form.modal-form {
+      display: flex;
+      padding: 10px;
+      gap: 5px;
+      flex-wrap: nowrap;
+      flex-direction: column;
+  }
+
+  .modal-container {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  }
+}

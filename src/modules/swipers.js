@@ -1,48 +1,47 @@
 
-// var swiper1 = null;
-// var swiper2 = null;
+var swipers = {};
 
-// function initSwiper1() {
-//   swiper1 = new Swiper('.swiper-1', {
-//     loop: true,
-//     pagination: {
-//       el: '.swiper-pagination-1',
-//       clickable: true,
-//     },
-//   });
-// }
+function initSwiper(containerClass, paginationClass) {
+  swipers[containerClass] = new Swiper('.' + containerClass, {
+    loop: true,
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination-' + paginationClass,
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.3,
+        enabled: true,
+      },
+      768: {
+        enabled: false,
+      },
+    },
+  });
+}
 
-// function initSwiper2() {
-//   swiper2 = new Swiper('.swiper-2', {
-//     loop: true,
-//     pagination: {
-//       el: '.swiper-pagination-2',
-//       clickable: true,
-//     },
-//   });
-// }
+function destroySwiper(containerClass) {
+  if (swipers[containerClass] !== undefined) {
+    swipers[containerClass].destroy();
+    delete swipers[containerClass];
+  }
+}
 
-// function destroySwiper() {
-//   if (swiper1 !== null) {
-//     swiper1.destroy();
-//     swiper1 = null;
-//   }
-//   if (swiper2 !== null) {
-//     swiper2.destroy();
-//     swiper2 = null;
-//   }
-// }
 
-// var breakpoint768 = window.matchMedia('(min-width: 768px)');
+var breakpoint768 = window.matchMedia('(min-width: 768px)');
 
-// function checkScreenWidth() {
-//   if (breakpoint768.matches) {
-//     destroySwiper();
-//   } else {
-//     initSwiper1();
-//     initSwiper2();
-//   }
-// }
+function checkScreenWidth() {
+  if (breakpoint768.matches) {
+    destroySwiper('swiper1');
+    destroySwiper('swiper2');
+    destroySwiper('swiper3');
+  } else {
+    initSwiper('swiper1', 1);
+    initSwiper('swiper2', 2);
+    initSwiper('swiper3', 3);
+  }
+}
 
-// window.addEventListener('load', checkScreenWidth);
-// window.addEventListener('resize', checkScreenWidth);
+window.addEventListener('load', checkScreenWidth);
+window.addEventListener('resize', checkScreenWidth);

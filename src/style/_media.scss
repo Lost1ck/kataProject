@@ -1,8 +1,4 @@
-@media (min-width: 768px) and (max-width: 1440px) {
-    // sidebar
-    .sidebar-header__nav .sidebar-header__list-left .sidebar-header__link:nth-child(1) {
-        display: none;
-    }
+@media (min-width: 769px) and (max-width: 1440px) {
 
     /* header */
     .block {
@@ -275,29 +271,33 @@
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
-    .swiper-slide:nth-child(n + 8) {
+        .swiper-slide:nth-child(n + 8) {
         display: flex;
     }
 
-    .swiper-wrapper.visible > .swiper-slide:nth-child(n + 8),
-    .swiper-wrapper.visible .swiper-slide:nth-child(4) {
+        .swiper-wrapper.visible > .swiper-slide:nth-child(n + 8),
+        .swiper-wrapper.visible .swiper-slide:nth-child(4) {
         display: none;
     }
 }
 
 @media (min-width: 1440px) {
-    .swiper-slide:nth-child(n + 9) {
+        .swiper-slide:nth-child(n + 9) {
         display: flex;
     }
 
-    .swiper-wrapper.visible .swiper-slide:nth-child(n + 9) {
+        .swiper-wrapper.visible .swiper-slide:nth-child(n + 9) {
+        display: none;
+    }
+
+        .sidebar-header__nav .sidebar-header__list-left .sidebar-header__link:nth-child(1) {
         display: none;
     }
 }
 
 
 @media (min-width: 768px) and (max-width: 1440px) {
-    .swiper-slide:nth-child(n+8) {
+        .swiper-slide:nth-child(n+8) {
         display: block;
     }
   }
@@ -307,3 +307,44 @@
         display: block;
     }
   }
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .swiper-slide:nth-child(n + 7) {
+        display: flex;
+    }
+
+    .swiper2.visible  .swiper-slide:nth-child(n + 7) {
+        display: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    .swiper-slide:nth-child(n + 7) {
+        display: flex;
+}
+
+    .swiper2.visible  .swiper-slide:nth-child(n + 9) {
+        display: none;
+}
+
+    .sidebar-header__nav .sidebar-header__list-left .sidebar-header__link:nth-child(1) {
+        display: none;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .swiper-slide:nth-child(n+8) {
+    display: block;
+}
+}
+
+@media (min-width: 1440px) {
+.swiper-slide:nth-child(n+9) {
+    display: block;
+}
+}

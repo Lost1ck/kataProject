@@ -6,6 +6,7 @@
     
     .container {
         display: flex;
+        position: relative;
     }
 
     .header-container {
@@ -90,7 +91,7 @@
         padding-left: 20px;
     }
     
-    .logo--h1 {
+    .logo-h1 {
         font-family: 'TTlakes bold', sans-serif;
         font-size: 28px;
         font-style: normal;
@@ -165,6 +166,7 @@
     
     .header-main__left p {
         font-family: sans-serif;
+        font-family: "TTlakes regular";
         color: $items-main;
         font-size: 14px;
         font-style: normal;
@@ -212,7 +214,7 @@
         display: block;
     }
     
-    @media (min-width:1440px) {
+    @media (min-width:1441px) {
         .block--disapear {
             display: none;
         }

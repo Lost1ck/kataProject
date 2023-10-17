@@ -8,7 +8,59 @@
 <body>
 
 <section class="container">
-    <div class="sidebar font">
+    <section class="modal modal-s">
+        <div class="modal-bg1"></div>
+        <div class="modal-container">
+            <div class="modal-crosshair1">
+                <img src="img/burger.svg" alt="">
+            </div>
+            <div class="logo">
+                <h1 class="logo--h1">Заказать звонок</h1>
+            </div>
+            <form class="modal-form">
+                <label for="tel"></label>
+                <input type="tel" name="tel" id="tel" placeholder="Телефон">
+                <div class="modal-confidential">
+                    <p>Нажимая “отправить”, вы даете согласие на <span class="modal-confidential__text-color">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-confidential__text-color">политикой конфиденциальности</span></p>
+                    <button type="submit" class="modal-confidential-btn">
+                        <p>отправить</p>
+                        <img src="img/goside.svg" alt="">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="modal modal-r">
+        <div class="modal-bg2"></div>
+        <div class="modal-container">
+            <div class="modal-crosshair2">
+                <img src="img/burger.svg" alt="">
+            </div>
+            <div class="logo">
+                <h1 class="logo--h1">Обратная связь</h1>
+            </div>
+            <form class="modal-form">
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="Имя">
+                <label for="tel"></label>
+                <input type="tel" name="tel" id="tel" placeholder="Телефон">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Электронная почта">
+                <label for="text"></label>
+                <textarea name="text" id="text" type="text" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                <div class="modal-confidential">
+                    <p>Нажимая “отправить”, вы даете согласие на <span class="modal-confidential__text-color">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-confidential__text-color">политикой конфиденциальности</span></p>
+    
+                    <button type="submit" class="modal-confidential-btn">
+                        <p>отправить</p>
+                        <img src="img/goside.svg" alt="">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="side">
+    <section class="sidebar font">
         <section class="sidebar-header">
             <nav class="sidebar-header__nav">
                 <ul class="sidebar-header__navigation-list">
@@ -31,6 +83,7 @@
         <section class="main-sidebar">
             <nav class="main-menu">
                 <ul class="menu-main__list">
+
                     <li class="menu__item">
                         <a href="#" class="menu__link">Ремонт техники</a>
                     </li>
@@ -88,7 +141,9 @@
                 </div>
             </nav>
         </section>
-    </div>
+    </section>
+    <div class="sidebar-bg"></div>
+</section>
     <section class="header-container">
         <div class="header">
             <nav class="nav">
@@ -97,13 +152,13 @@
                         <h1 class="logo--h1">Услуги и сервисы</h1>
                     </div>
                     <div class="block__inside">
-                        <div class="block__item">
+                        <div class="block__item item-request">
                             <a href="#">
                                 <span>Оставить заявку</span>
                                 <img src="img/settings.svg" alt="">
                             </a>
                         </div>
-                        <div class="block__item">
+                        <div class="block__item item-status">
                             <a href="#">
                                 <span>Статус ремонта</span>
                                 <img src="img/search.svg" alt="">
@@ -113,9 +168,9 @@
                 </div>
                 <div class="menu-old">
                     <div class="burger">
-                        <div class="item">
+                        <div class="item show-burger1">
                             <a href="#">
-                                <img src="img/burger.svg" alt="">
+                                <img src="img/before_burger.svg" alt="">
                             </a>
                         </div>
                         <div class="item">
@@ -146,13 +201,13 @@
                         <div class="item">
                             <div class="divider"></div>
                         </div>
-                        <div class="item">
+                        <div class="item item-request3">
                             <a href="#">
                                 <span>Оставить заявку</span>
                                 <img src="img/settings.svg" alt="">
                             </a>
                         </div>
-                        <div class="item">
+                        <div class="item item-status3">
                             <a href="#">
                                 <span>Статус ремонта</span>
                                 <img src="img/search.svg" alt="">
@@ -162,9 +217,9 @@
                 </div>
                 <div class="menu-new">
                     <div class="burger">
-                        <div class="items">
+                        <div class="items show-burger2">
                             <a href="#">
-                                <img src="img/burger.svg" alt="">
+                                <img src="img/before_burger.svg" alt="">
                             </a>
                         </div>
                         <div class="items">
@@ -177,12 +232,12 @@
                         </div>
                     </div>
                     <div class="group">
-                        <div class="items">
+                        <div class="items item-request2">
                             <a href="#">
                                 <img src="img/settings.svg" alt="">
                             </a>
                         </div>
-                        <div class="items">
+                        <div class="items item-status2">
                             <a href="#">
                                 <img src="img/search.svg" alt="">
                             </a>
@@ -258,10 +313,10 @@
                     </div>
                     <div class="swiper-pagination swiper-pagination-1"></div>
                 </div>
-                <div class="footer__button">
+                <div class="swiper-footer  swiper__disapear--b768">
                     <a href="#">
-                        <img class="footer-button_img" src="img/arrow-hide.svg" alt="">
-                        <p class="footer-button_text">Скрыть</p>
+                        <img class="swiper-footer_img" src="img/arrow-hide.svg" alt="">
+                        <p class="swiper-footer_text">Скрыть</p>
                     </a>
                 </div>
             </section>
@@ -275,7 +330,7 @@
                             <div class="swiper-card2"><p>Ремонт ноутбуков</p><a href="#"><img src="img/action.svg" alt=""></a></div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="swiper-card2"><p>Ремонт ноутбуков</p><a href="#"><img src="img/action.svg" alt=""></a></div>
+                            <div class="swiper-card2"><p>Ремонт планшетов</p><a href="#"><img src="img/action.svg" alt=""></a></div>
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-card2">
@@ -284,10 +339,10 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="swiper-card2"><p>Ремонт ноутбуков</p><a href="#"><img src="img/action.svg" alt=""></a></div>
+                            <div class="swiper-card2"><p>Ремонт ПК</p><a href="#"><img src="img/action.svg" alt=""></a></div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="swiper-card2"><p>Ремонт ноутбуков</p><a href="#"><img src="img/action.svg" alt=""></a></div>
+                            <div class="swiper-card2"><p>Ремонт  мониторов</p><a href="#"><img src="img/action.svg" alt=""></a></div>
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-card2"><p>Ремонт ноутбуков</p><a href="#"><img src="img/action.svg" alt=""></a></div>
@@ -305,14 +360,16 @@
                 <div class="swiper-pagination swiper-pagination-2"></div>
             </section>
 
-            <div class="footer__button">
-                <a href="#">
-                    <img class="footer-button_img" src="img/arrow-hide.svg" alt="">
-                    <p class="footer-button_text">Скрыть</p>
+            <div class="swiper-footer swiper__disapear--b768">
+                <a href="#" class="swiper__showed">
+                    <img class="swiper-footer_img2" src="img/arrow-hide.svg" alt="">
+                    <p class="swiper-footer_text2">Скрыть</p>
                 </a>
             </div>
-    
             <section class="swipper">
+                <div class="swipper-header">
+                    <h2 class="swipper__h2">Цены и услуги</h2>
+                </div>
                 <div class="swiper-info swiper__disapear--b768">
                     <p>Ремонтные услуги</p>
                     <p>Цена</p>
@@ -479,6 +536,57 @@
             </div>
         </footer>
     </section>
+    <!-- <section class="modal modal-r">
+        <div class="modal-crosshair">
+            <img src="img/burger.svg" alt="">
+        </div>
+        <div class="logo">
+            <h1 class="logo--h1">Обратная связь</h1>
+        </div>
+        <form class="modal-form">
+            <label for="name"></label>
+            <input type="text" name="name" id="name" placeholder="Имя">
+
+            <label for="tel"></label>
+            <input type="tel" name="tel" id="tel" placeholder="Телефон">
+
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="Электронная почта">
+            
+            <label for="text"></label>
+            <textarea name="text" id="text" type="text" cols="30" rows="10" placeholder="Сообщение"></textarea>
+
+
+            <div class="modal-confidential">
+                <p>Нажимая “отправить”, вы даете согласие на <span class="modal-confidential__text-color">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-confidential__text-color">политикой конфиденциальности</span></p>
+
+                <button type="submit" class="modal-confidential-btn">
+                    <p>отправить</p>
+                    <img src="img/goside.svg" alt="">
+                </button>
+            </div>
+        </form>
+    </section> -->
+    <!-- <section class="modal modal-status modal-hide">
+        <div class="modal-crosshair">
+            <img src="img/burger.svg" alt="">
+        </div>
+        <div class="logo">
+            <h1 class="logo--h1">Заказать звонок</h1>
+        </div>
+        <form class="modal-form">
+            <label for="tel"></label>
+            <input type="tel" name="tel" id="tel" placeholder="Телефон">
+            <div class="modal-confidential">
+                <p>Нажимая “отправить”, вы даете согласие на <span class="modal-confidential__text-color">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-confidential__text-color">политикой конфиденциальности</span></p>
+
+                <button type="submit" class="modal-confidential-btn">
+                    <p>отправить</p>
+                    <img src="img/goside.svg" alt="">
+                </button>
+            </div>
+        </form>
+    </section> -->
 </section>
 
 
