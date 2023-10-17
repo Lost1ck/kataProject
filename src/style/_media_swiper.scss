@@ -26,11 +26,11 @@
       flex-direction: row-reverse;
     }
   
-    .swiper__disapear--b768 {
+    .disapear--b768 {
       display: block;
     }
   
-    .swiper-info.swiper__disapear--b768 {
+    .swiper-info.disapear--b768 {
       display: grid;
       grid-template-columns: 3fr 1fr 1fr 1fr;
       padding: 10px 0px 0px 20px;
@@ -43,7 +43,7 @@
       }
     }
   
-    .swiper__disapear--a768 {
+    .disapear--a768 {
       display: none;
     }
   

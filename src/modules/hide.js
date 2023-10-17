@@ -1,6 +1,6 @@
-const hideBotton = document.querySelector('.swiper-footer_text');
+const hideBotton = document.querySelector('.swiper-footer__text');
 const hiddenSlides = document.querySelector('.swiper-wrapper');
-const hideIcon = document.querySelector('.swiper-footer_img');
+const hideIcon = document.querySelector('.swiper-footer__img');
 
 let isHidden = true;
 
@@ -27,10 +27,10 @@ hideBotton.addEventListener('click', () => {
 });
 
 
-    const swiperFooter = document.querySelector('.swiper__showed');
+    const swiperFooter = document.querySelector('.swiper-showed');
     const hiddenSlides2 = document.querySelector('.swiper2');
-    const hideBotton2 = document.querySelector('.swiper-footer_text2');
-    const hideIcon2 = document.querySelector('.swiper-footer_img2');
+    const hideBotton2 = document.querySelector('.swiper-footer__text2');
+    const hideIcon2 = document.querySelector('.swiper-footer__img2');
 
     let isActive = true;
 

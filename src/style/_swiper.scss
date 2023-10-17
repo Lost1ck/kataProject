@@ -71,7 +71,7 @@ $swiper-pagination-bullet-size: 12px;
 
 .swiper-card2 {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 240px;
   height: 160px;
   border-radius: 6px;
@@ -134,7 +134,7 @@ $swiper-pagination-bullet-size: 12px;
   letter-spacing: 0.2px;
 }
 
-.services__p--second {
+.services--p {
   color: black;
   font-size: 14px;
 }
@@ -157,7 +157,7 @@ $swiper-pagination-bullet-size: 12px;
   color: #fff;
 }
 
-.swiper__disapear--b768 {
+.disapear--b768 {
   display: none;
 }
 

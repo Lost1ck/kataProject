@@ -92,11 +92,11 @@
         font-family: "TT Lakes-medium", sans-serif;
     }
 
-    .menu__item {
+    .menu-item {
         margin-top: 25px;
     }
 
-    .menu__item:nth-child(1) {
+    .menu-item:nth-child(1) {
         margin-top: 0;
     }
 
@@ -106,15 +106,15 @@
 
         /* ---- main ---- */
 
-    .main-sidebar .menu__item > a {
+    .main-sidebar .menu-item > a {
         transition-duration: .2s;
     }
 
-    .main-sidebar .menu-main__list > li {
+    .main-sidebar .menu-list > li {
         position: relative;
     }
 
-    .main-sidebar .menu-main__list > li:hover::after {
+    .main-sidebar .menu-list > li:hover::after {
         position: absolute;
         content: '';
         top: -5px;
@@ -155,11 +155,11 @@
         display: flex;
     }
 
-    .footer-menu__item {
+    .footer-menu-item {
         padding-right: 16px;
     }
 
-    .menu__link:hover {
+    .menu-link:hover {
         color: $text-second;
     }
 
@@ -200,7 +200,7 @@
         color: $text-second;
     }
 
-    .footer-menu-main__list:hover > :not(:hover), .menu-main__list:hover > :not(:hover){
+    .footer-menu-list:hover > :not(:hover), .menu-list:hover > :not(:hover){
         filter: blur(1px);
         transition: 1s;
     }
