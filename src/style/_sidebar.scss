@@ -1,22 +1,19 @@
     .sidebar {
-        // min-width: 320px;
         width: 100%;
         position: relative;
         padding: 15px;
         min-height: 320px;
         background-color: $carousel-back;
         display: block;
-        // box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20);
     }
     .sidebar-bg {
         display: none;
     }
     
     @media (min-width: 768px) {
-    .sidebar {
-        width: 320px;
-    }
-
+        .sidebar {
+            width: 320px;
+        }
     }
     
     @media (min-width: 320px) and (max-width: 1440px) {
@@ -27,7 +24,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        background-color: #fff;
+        background-color: $carousel-back;
         opacity: 0.98;
     }
 
@@ -83,13 +80,8 @@
         align-items: center;
     }
 
-    .sidebar-header__list-left .sidebar-header__link:nth-child(1) {
-
-    }
-
     .main-sidebar {
         color: $items-main;
-        font-family: "TT Lakes-medium", sans-serif;
     }
 
     .menu-item {
@@ -164,13 +156,11 @@
     }
 
     .footer-contacts {
-        color: #1B1C21;
-        font-family: "TT Lakes-demi", sans-serif;
+        color: $items-main;
     }
 
     .footer-contacts a:nth-child(1) {
         margin: 10px 0 0;
-        font-family: "TT Lakes-medium", sans-serif;
     }
 
     .footer-contacts a {
@@ -178,7 +168,6 @@
     }
 
     .phone {
-        font-family: "TT Lakes-demi", sans-serif;
         font-size: 24px;
         font-weight: 700;
         line-height: 32px;
@@ -189,7 +178,6 @@
         display: flex;
         margin-top: 15px;
         color: $items-main;
-        font-family: "TT Lakes-medium", sans-serif;
     }
 
     .footer-lang a {
@@ -204,10 +192,6 @@
         filter: blur(1px);
         transition: 1s;
     }
-
-    // .sidebar-header__list-left .sidebar-header__link:nth-child(1) {
-    //     display: none;
-    // }
 
     .footer-contacts__phone {
         font-family: 'TTlakes bold', sans-serif;
@@ -229,11 +213,3 @@
             position: static;
         }
     }
-
-    // @media (min-width: 320px) and (max-width: 360px) {
-    //     .font.actions {
-    //         // display: block;
-    //         // width: 100%;
-    //         // height: 100%;
-    //     }
-    // }

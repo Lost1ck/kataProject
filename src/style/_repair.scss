@@ -1,13 +1,13 @@
 $repair-text-color: $text-second;
 
 .repair {
-    background-color: #F8F8F8;
+    background-color: $main-back;
 }
 
 .repair-header {
     padding: 16px 32px;
     height: 56px;
-    background: linear-gradient(90deg, #F8F8F8 0%, #FFF 98.61%);
+    background: linear-gradient(90deg, $main-back 0%, $carousel-back 98.61%);
 }
 
 .repair-h2 {
@@ -31,8 +31,8 @@ $repair-text-color: $text-second;
     margin: 16px 30px;
     padding: 16px;
     border-radius: 6px;
-    border: 1px solid #EAEAEA;
-    background: #FFF;
+    border: 1px solid $divided-action;
+    background: $carousel-back;
     width: 240px;
     height: 160px;
 

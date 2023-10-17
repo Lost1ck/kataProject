@@ -10,8 +10,7 @@
     }
 
     .header-container {
-        // min-width: 1120px;
-        background-color: #F8F8F8;
+        background-color: $main-back;
     }
         /* ----header---- */
     .header {
@@ -182,7 +181,6 @@
     }
     
     .header-main__read > p {
-        font-family: 'TTlakes medium', sans-serif;
         color: $items-main;
         font-size: 16px;
         font-style: normal;
