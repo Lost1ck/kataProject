@@ -31,11 +31,10 @@
         width: 6.4px;
         height: 1.4px;
         background-color: $icons-back;
-        rotate: -45deg;
+        transform: rotate(-45deg);
         border-radius: 1px;
       }
     }
-  
   
     a {
       margin-top: 10px;

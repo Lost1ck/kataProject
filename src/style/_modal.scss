@@ -193,10 +193,10 @@ input::placeholder {
           font-size: 24px;
         }
         &--h1::after {
-          top: -5px;
+          top: 13px;
         }
       }
-  }
+    }
     .logo:nth-child(2) {
       background: $carousel-back;
       display: block;
@@ -207,22 +207,15 @@ input::placeholder {
       right: 0;
       z-index:11;
     }
-    form.modal-form {
-      display: flex;
-      padding: 10px;
-      gap: 5px;
-      flex-wrap: nowrap;
-      flex-direction: column;
-  }
+  //   form.modal-form {
+  //     display: flex;
+  //     padding: 10px;
+  //     gap: 5px;
+  //     flex-wrap: nowrap;
+  //     flex-direction: column;
+  // }
 
   .modal-container {
-    width: 320px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    height: 100%;
-    background-color: $carousel-back;
-    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+    width: auto;
   }
 }
