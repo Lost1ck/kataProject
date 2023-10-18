@@ -1,1 +1,4 @@
-/.DS_Store
+.browserslistrc
+node_modules/
+src/
+.DS_Store
